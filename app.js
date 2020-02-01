@@ -14,13 +14,13 @@ var app = new Vue({
 			this.time = time;
 			return "GOOD "+this.time+" "+this.name;
 		},
-		increase : function()
+		increase : function(inc)
 		{
-			this.age += 1;
+			this.age += inc;
 		},
-		decrease : function()
+		decrease : function(dec)
 		{
-			this.age -= 1;
+			this.age -= dec;
 		}
 	}
 })

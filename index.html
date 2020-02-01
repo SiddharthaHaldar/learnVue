@@ -2,6 +2,7 @@
 <html>
 <head>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
 	<title></title>
 </head>
 <body>
@@ -10,11 +11,14 @@
 		<h1 v-if="show">{{greet("Afternoon")}}</h1>
 		<h2>I am {{name}}</h2>
 		<a v-bind:href="website">MY WEBSITE</a>
-		<input type="text" v-bind:value="name">
+		<input v-model="name">
 		<p>AND, This is my first vue app</p>
 		<p>AGE : {{age}}</p>
-		<button v-on:click="increase" >Increase</button>
-		<button v-on:click="decrease" >Deacrease</button>
+		<button v-on:click="increase(1)" >Increase</button>
+		<button v-on:click="decrease(1)" >Deacrease</button>
+		<button v-on:dblclick="increase(10)" >Increase by 10</button>
+		<button v-on:dblclick="decrease(10)" >Decrease by 10</button>
+		<div id="canvas">{{name}}</div>
 	</div>
 	<script type="text/javascript" src="./app.js"></script>
 </body>
