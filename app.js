@@ -20,7 +20,7 @@ var app = new Vue({
 		},
 		decrease : function(dec)
 		{
-			this.age -= dec;
+			this.age -= dec
 		}
 	}
 })
