@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <body>
-	<div id="vue-app">
+	<div id="vue-app" >
 		<h1>HELLO WORLD</h1>
 		<h1 v-if="show">{{greet("Afternoon")}}</h1>
 		<h2>I am {{name}}</h2>
@@ -18,7 +18,16 @@
 		<button v-on:click="decrease(1)" >Deacrease</button>
 		<button v-on:dblclick="increase(10)" >Increase by 10</button>
 		<button v-on:dblclick="decrease(10)" >Decrease by 10</button>
+		<button-counter></button-counter>
+		<blog-post
+			v-for="post in posts"
+			v-bind:id="post.id"
+			v-bind:post="post"
+			v-on:fire-event="postFontSize += 0.1"
+			:style="{ fontSize: postFontSize + 'em' }">
+		</blog-post>
 		<div id="canvas">{{name}}</div>
+
 	</div>
 	<script type="text/javascript" src="./app.js"></script>
 </body>
